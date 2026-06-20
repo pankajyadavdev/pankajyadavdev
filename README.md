@@ -1,6 +1,8 @@
 ## Hi there 👋
 
-<!--
+Hello, my name is Pankaj Yadav and I am a final-year BCA student of purvanchal university with a strong foundation in programming languages like C, Java, Python, HTML, CSS, and JavaScript. I have a keen interest in emerging technologies, including Generative AI, Artificial Intelligence, and Machine Learning. Currently, I am expanding my skills in web development to build innovative digital solutions. I am passionate about leveraging technology to solve real-world problems and continuously enhancing my technical expertise.
+
+!--
 **pankajyadavdev/pankajyadavdev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
