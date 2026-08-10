@@ -1,0 +1,8 @@
+{
+  "name": "Pankaj Yadav Portfolio",
+  "description": "A high-performance glassmorphic personal portfolio for Pankaj Yadav, showcasing Python, Java, Automation, Web Dev, and interactive project simulations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

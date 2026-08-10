@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net (Pillar 1)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Primitive Helpers (Pillar 3)
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    // Validation Blueprint (Pillar 2 & 10)
+    function isValidTransmission(data) {
+      return data.keys().hasAll(['transmissionId', 'name', 'email', 'message', 'timestampString', 'createdAt'])
+        && data.keys().size() == 6
+        && data.transmissionId is string && data.transmissionId.size() >= 1 && data.transmissionId.size() <= 32
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 100
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 100 && data.email.matches('^[^@]+@[^@]+\\.[^@]+$')
+        && data.message is string && data.message.size() >= 1 && data.message.size() <= 5000
+        && data.timestampString is string && data.timestampString.size() >= 1 && data.timestampString.size() <= 100
+        && data.createdAt == request.time;
+    }
+
+    // Secure Match Block
+    match /transmissions/{transmissionId} {
+      allow create: if isValidId(transmissionId) && isValidTransmission(incoming());
+      allow read, update, delete: if false;
+    }
+  }
+}

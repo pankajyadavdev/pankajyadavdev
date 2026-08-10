@@ -1,11 +1,20 @@
-Hi there 
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-Hello, my name is Pankaj Yadav and I am a final-year BCA student of purvanchal university with a strong foundation in programming languages like C, Java, Python, HTML, CSS, and JavaScript. I have a keen interest in emerging technologies, including Generative AI, Artificial Intelligence, and Machine Learning. Currently, I am expanding my skills in web development to build innovative digital solutions. I am passionate about leveraging technology to solve real-world problems and continuously enhancing my technical expertise.
-Here are some ideas to get you started:
+# Run and deploy your AI Studio app
 
-- 🔭 I’m currently working on Chatbot building 
-- 🌱 I’m currently learning Machine learning 
-- 👯 I’m looking to collaborate on automation and ai models 
-- 🤔 I’m looking for help with automation and development 
-- 💬 Ask me about ai , ml,agents 
-- 📫 How to reach me: @pankajyadavdevv@gmail.com
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/8e2f31d3-c5f4-48cb-ae62-34f2ee5162a5
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
